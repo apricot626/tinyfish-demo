@@ -20,11 +20,23 @@ export default function handler(req, res) {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
     res.end(`
-      <h1>ダッシュボード</h1>
-      <p>売上: 1,000,000円</p>
-      <p>ユーザー数: 523人</p>
-      <p>ステータス: 正常</p>
-    `);
+  <h1>ダッシュボード</h1>
+
+  <h2>📊 売上データ</h2>
+  <p>今日の売上: 120,000円</p>
+  <p>今月の売上: 1,000,000円</p>
+  <p>注文数: 320件</p>
+
+  <h2>👥 ユーザー情報</h2>
+  <p>総ユーザー数: 523人</p>
+  <p>アクティブユーザー: 87人</p>
+  <p>新規登録: 12人</p>
+
+  <h2>🚨 システム状態</h2>
+  <p>APIステータス: 正常</p>
+  <p>DB接続: OK</p>
+  <p>エラー件数: 2件</p>
+  `);
 
   } catch (e) {
     res.statusCode = 500;
