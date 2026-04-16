@@ -18,7 +18,7 @@ export default function handler(req, res) {
     }
 
     res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/html');
+    res.setHeader('Content-Type', 'text/html; charset=utf-8');
     res.end(`
       <h1>ダッシュボード</h1>
       <p>売上: 1,000,000円</p>
